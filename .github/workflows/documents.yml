@@ -34,6 +34,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Build the container
         run:  docker-compose -f local.yml build docs
+      - name: Run the container
+        run:  docker-compose -f local.yml up docs
       - name: Get build files from the container
         run:  docker cp $(docker ps -f name=docs -q):/docs/_build ./
       - name: Setup Pages
