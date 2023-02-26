@@ -27,9 +27,9 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 
-project = "VMUN-Backend"
-copyright = """2023, The Model UN Coordination Framework Developed and Maintained by the ValidebagMUN Society"""
-author = "The Model UN Coordination Framework Developed and Maintained by the ValidebagMUN Society"
+project = "VMUN"
+copyright = """2023, ValidebagMUN"""
+author = "HexaBinary"
 
 
 # -- General configuration ---------------------------------------------------
@@ -40,6 +40,7 @@ author = "The Model UN Coordination Framework Developed and Maintained by the Va
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
+    "sphinx_rtd_theme",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,7 +56,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "alabaster"
+html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
