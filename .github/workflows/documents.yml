@@ -3,6 +3,7 @@ name: Docs
 env: 
   DOCKER_BUILDKIT: 1
   COMPOSE_DOCKER_CLI_BUILD: 1
+  COMPOSE_FILE: local.yml
 
 permissions:
   contents: read
@@ -33,9 +34,9 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Build the container
-        run:  docker-compose -f local.yml build docs
+        run:  docker-compose build 
       - name: Run the container
-        run:  docker-compose -f local.yml up docs -d
+        run:  docker-compose up -d
       - name: Get build files from the container
         run:  docker cp $(docker ps -f name=docs -q):/docs/_build ./
       - name: Setup Pages
