@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a9575f6-6f27-4b8a-a6c8-5e50724b5a33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="3a9575f6-6f27-4b8a-a6c8-5e50724b5a33" name="Changes" comment="docs(fix): fix dependency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements/local.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/local.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="cookiecutter-migration" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -67,13 +72,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;cookiecutter-migration&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;setup-docs-deployment&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
     &quot;timeTracker.activityTracker&quot;: &quot;null&quot;,
     &quot;timeTracker.comment&quot;: &quot;&quot;,
     &quot;timeTracker.inactivityPeriodInMills&quot;: &quot;600000&quot;,
@@ -105,23 +110,55 @@
       <recent name="$PROJECT_DIR$/vmun/conferences/templates/delegates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.migrate">
-    <configuration name="TailwindCSS Live Compile" type="PythonConfigurationType" factoryName="Python">
-      <module name="VMUN-Backend" />
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="vmun_backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/.local/share/virtualenvs/vmun-IxSA6PBs/bin/python" />
-      <option name="SDK_NAME" value="Pipenv (vmun)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vmun" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vmun/manage.py" />
-      <option name="PARAMETERS" value="tailwind start" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="vmun_backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="vmun_backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -152,47 +189,63 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="vmun" type="Python.DjangoServer" factoryName="Django server">
-      <module name="VMUN-Backend" />
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="vmun_backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="ANALYTICS_SECRETS" value="{&quot;web&quot;:{&quot;client_id&quot;:&quot;913166450039-me3lst46mrntpr15q5d3tnfnk4n6nc8u.apps.googleusercontent.com&quot;,&quot;project_id&quot;:&quot;vmun-376821&quot;,&quot;auth_uri&quot;:&quot;https://accounts.google.com/o/oauth2/auth&quot;,&quot;token_uri&quot;:&quot;https://oauth2.googleapis.com/token&quot;,&quot;auth_provider_x509_cert_url&quot;:&quot;https://www.googleapis.com/oauth2/v1/certs&quot;,&quot;client_secret&quot;:&quot;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&quot;}}" />
-        <env name="DJANGO_ALLOWED_HOSTS" value="localhost,127.0.0.1" />
-        <env name="DJANGO_DEBUG" value="True" />
-        <env name="DJANGO_SECRET_KEY" value="0P#OC+N@$9wO|wxb&amp;7!E&lt;Sx=@5c.Wm" />
-        <env name="SENTRY_DSN" value="https://190c5dc6762d4c3da89a7e44f1ec818c@o4504278150348800.ingest.sentry.io/4504600727257088" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/.local/share/virtualenvs/vmun-IxSA6PBs/bin/python" />
-      <option name="SDK_NAME" value="Pipenv (vmun)" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Docker Compose Local" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="secondarySourceFiles">
-            <list>
-              <option value="production.yml" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="local.yml" />
-        </settings>
-      </deployment>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="vmun_backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <module name="vmun_backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <module name="vmun_backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
@@ -216,12 +269,9 @@
       <item itemvalue="Django Server.migrate" />
       <item itemvalue="Django Server.runserver" />
       <item itemvalue="Django Server.runserver_plus" />
-      <item itemvalue="Django Server.vmun" />
       <item itemvalue="Docker.docker-compose up django" />
       <item itemvalue="Docker.docker-compose up docs" />
-      <item itemvalue="Docker.Docker Compose Local" />
       <item itemvalue="Python.merge_production_dotenvs_in_dotenv" />
-      <item itemvalue="Python.TailwindCSS Live Compile" />
       <item itemvalue="Python tests.pytest: ." />
       <item itemvalue="Python tests.pytest: users" />
     </list>
@@ -239,15 +289,96 @@
       <workItem from="1676800216619" duration="5044000" />
       <workItem from="1676973280030" duration="2382000" />
       <workItem from="1677409692536" duration="4166000" />
+      <workItem from="1677426816154" duration="8242000" />
     </task>
+    <task id="LOCAL-00001" summary="chore(editor): add editor config files to repo">
+      <created>1677427110360</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677427110360</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: fix naming in LICENSE">
+      <created>1677431217347</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677431217347</updated>
+    </task>
+    <task id="LOCAL-00003" summary="style(docs): change sphinx theme to ReadTheDocs">
+      <created>1677431251408</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677431251408</updated>
+    </task>
+    <task id="LOCAL-00004" summary="docs(chore): add Github Action for sphinx deployment to Pages">
+      <created>1677432294760</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677432294760</updated>
+    </task>
+    <task id="LOCAL-00005" summary="docs(fix): add project dependencies to documentation deployment workflow">
+      <created>1677432700422</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677432700423</updated>
+    </task>
+    <task id="LOCAL-00006" summary="docs(fix): fix project information values in docs/conf.py">
+      <created>1677435458273</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677435458273</updated>
+    </task>
+    <task id="LOCAL-00007" summary="docs(fix): fix dependency">
+      <created>1677436338702</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677436338703</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="4f1a7002-2f2b-4c08-aca0-206dc2defad2" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="4f1a7002-2f2b-4c08-aca0-206dc2defad2">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/hexabinary/Dev/VMUN-Backend/docs" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -256,7 +387,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="setup-docs-deployment" />
                       </list>
                     </value>
                   </entry>
@@ -270,6 +401,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="chore(editor): add editor config files to repo" />
+    <MESSAGE value="chore: fix naming in LICENSE" />
+    <MESSAGE value="style(docs): change sphinx theme to ReadTheDocs" />
+    <MESSAGE value="docs(chore): add Github Action for sphinx deployment to Pages" />
+    <MESSAGE value="docs(fix): add project dependencies to documentation deployment workflow" />
+    <MESSAGE value="docs(fix): fix project information values in docs/conf.py" />
+    <MESSAGE value="docs(fix): fix dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs(fix): fix dependency" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint suspend="NONE" type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/VMUN_Backend$TailwindCSS_Live_Compile.coverage" NAME="TailwindCSS Live Compile Coverage Results" MODIFIED="1675707407614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vmun" />
