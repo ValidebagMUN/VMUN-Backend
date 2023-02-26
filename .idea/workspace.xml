@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9575f6-6f27-4b8a-a6c8-5e50724b5a33" name="Changes" comment="docs(fix): fix dependency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements/local.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements/local.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,7 @@
       <recent name="$PROJECT_DIR$/vmun/conferences/templates/delegates" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.docker-compose up docs">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="vmun_backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -289,7 +289,7 @@
       <workItem from="1676800216619" duration="5044000" />
       <workItem from="1676973280030" duration="2382000" />
       <workItem from="1677409692536" duration="4166000" />
-      <workItem from="1677426816154" duration="8242000" />
+      <workItem from="1677426816154" duration="11206000" />
     </task>
     <task id="LOCAL-00001" summary="chore(editor): add editor config files to repo">
       <created>1677427110360</created>
@@ -340,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677436338703</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="docs(fix): fix dependency">
+      <created>1677438048127</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677438048127</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,12 +364,17 @@
         <entry key="4f1a7002-2f2b-4c08-aca0-206dc2defad2">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
