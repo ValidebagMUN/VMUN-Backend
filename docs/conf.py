@@ -27,9 +27,9 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 
-project = "VMUN-Backend"
-copyright = """2023, The Model UN Coordination Framework Developed and Maintained by the ValidebagMUN Society"""
-author = "The Model UN Coordination Framework Developed and Maintained by the ValidebagMUN Society"
+project = "VMUN"
+copyright = """2023, ValidebagMUN"""
+author = "HexaBinary"
 
 
 # -- General configuration ---------------------------------------------------
