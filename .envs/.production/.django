@@ -11,7 +11,7 @@ DJANGO_SECURE_SSL_REDIRECT=False
 
 # django-allauth
 # ------------------------------------------------------------------------------
-DJANGO_ACCOUNT_ALLOW_REGISTRATION=True
+DJANGO_ACCOUNT_ALLOW_REGISTRATION=False
 
 # Gunicorn
 # ------------------------------------------------------------------------------

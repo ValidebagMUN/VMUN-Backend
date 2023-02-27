@@ -80,6 +80,12 @@ EMAIL_SUBJECT_PREFIX = env(
     "DJANGO_EMAIL_SUBJECT_PREFIX",
     default="[VMUN-Backend]",
 )
+EMAIL_HOST = env("DJANGO_EMAIL_HOST")
+EMAIL_PORT = env("DJANGO_EMAIL_PORT")
+EMAIL_HOST_USER = env("DJANGO_EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("DJANGO_EMAIL_HOST_PASSWORD")
+EMAIL_USE_TLS = env("DJANGO_EMAIL_USE_TLS", default=False)
+
 
 # ADMIN
 # ------------------------------------------------------------------------------
