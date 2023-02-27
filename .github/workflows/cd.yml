@@ -1,0 +1,36 @@
+name: CD
+
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
+concurrency: production
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deployment:
+    name: Deployment
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: vmun.validebagmun.org
+    steps:
+      - name: SSH into production server - build & deploy
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd VMUN-Backend/
+            git pull
+            bash deploy.sh
