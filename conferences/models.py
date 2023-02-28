@@ -5,7 +5,7 @@ from django.utils.text import slugify
 
 class Institution(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(default=slugify(name))
+    slug = models.SlugField(max_length=10, default=slugify(name))
     address = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
@@ -17,7 +17,7 @@ class Institution(models.Model):
 
 class Conference(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(default=slugify(name), unique=True)
+    slug = models.SlugField(max_length=10, default=slugify(name), unique=True)
     venue = models.CharField(max_length=200)
     host = models.ForeignKey(Institution, on_delete=models.CASCADE)
     start = models.DateTimeField(default=timezone.now)
@@ -32,7 +32,7 @@ class Conference(models.Model):
 
 class Committee(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(default=slugify(name))
+    slug = models.SlugField(max_length=10, default=slugify(name))
     conference = models.ForeignKey(Conference, on_delete=models.CASCADE)
 
     def __str__(self):

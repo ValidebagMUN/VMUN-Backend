@@ -24,7 +24,7 @@ class User(AbstractUser):
         ("ADV", "Advisor"),
         ("ADM", "Admin"),
     )
-    type = CharField(max_length=10, choices=USER_CHOICES, default="DEL")
+    type = CharField(max_length=3, choices=USER_CHOICES, default="DEL")
     phone = models.CharField(max_length=10, blank=True, null=True)
     institution = models.ForeignKey(
         Institution, on_delete=models.CASCADE, blank=True, null=True
