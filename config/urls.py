@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
 
-urlpatterns = [
+urls = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
@@ -22,10 +22,10 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
     # Static file serving when using Gunicorn + Uvicorn for local web socket development
-    urlpatterns += staticfiles_urlpatterns()
+    urls += staticfiles_urlpatterns()
 
 # API URLS
-urlpatterns += [
+urls += [
     # API base url
     path("api/", include("config.api_router")),
     # DRF auth token
@@ -41,7 +41,7 @@ urlpatterns += [
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.
-    urlpatterns += [
+    urls += [
         path(
             "400/",
             default_views.bad_request,
@@ -62,4 +62,6 @@ if settings.DEBUG:
     if "debug_toolbar" in settings.INSTALLED_APPS:
         import debug_toolbar
 
-        urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
+        urls = [path("__debug__/", include(debug_toolbar.urls))] + urls
+
+urlpatterns = [path("api/", include(urls))]
