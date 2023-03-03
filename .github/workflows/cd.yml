@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://vmun.validebagmun.org
+      url: https://api.validebagmun.org
     steps:
       - name: SSH into production server - build & deploy
         uses: appleboy/ssh-action@v0.1.7

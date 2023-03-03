@@ -1,6 +1,7 @@
 # General
 # ------------------------------------------------------------------------------
-DJANGO_READ_DOT_ENV_FILE=True
+DJANGO_READ_DOT_ENV_FILE=False
+DJANGO_ACCOUNT_ALLOW_REGISTRATION=False
 USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
 # Redis
